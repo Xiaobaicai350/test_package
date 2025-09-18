@@ -1,0 +1,14 @@
+# Todo管理器依赖包
+# 本应用使用Python标准库，无需额外依赖
+
+# 如果需要打包，请安装：
+# pyinstaller==6.16.0
+
+# Python版本要求：
+# Python >= 3.6
+
+# 标准库依赖（无需安装）：
+# tkinter (GUI界面)
+# json (数据存储)
+# os (文件操作)
+# datetime (时间处理)

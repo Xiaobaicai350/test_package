@@ -1,0 +1,3 @@
+([('Todo管理器',
+   '/Users/edy/PycharmProjects/PythonProject/dist/Todo管理器',
+   'EXECUTABLE')],)
