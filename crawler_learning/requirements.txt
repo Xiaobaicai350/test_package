@@ -1,0 +1,34 @@
+# 爬虫学习所需依赖包
+# 注意：使用 >= 而不是 == 以获得更好的兼容性
+
+# 第一阶段：基础请求库
+requests>=2.28.0
+urllib3>=2.0.0
+
+# 第二阶段：网页解析库
+beautifulsoup4>=4.11.0
+lxml>=4.9.0  # 如果安装失败可以跳过，使用html.parser
+html5lib>=1.1
+
+# 第三阶段：数据存储（可选）
+# pymysql>=1.0.0  # 如果不用MySQL可以注释掉
+# pandas>=2.0.0
+# openpyxl>=3.0.0
+
+# 第四阶段：动态网页处理（可选，学到第四阶段再安装）
+# selenium>=4.10.0
+# playwright>=1.40.0
+
+# 第五阶段：Scrapy框架（可选，学到第五阶段再安装）
+# scrapy>=2.10.0
+# scrapy-redis>=0.7.0
+
+# 第六阶段：异步爬虫（可选，学到第六阶段再安装）
+# aiohttp>=3.8.0
+# fake-useragent>=1.4.0
+
+# 工具库（可选）
+# pillow>=10.0.0  # 图片处理
+# pytesseract>=0.3.0  # OCR识别
+# redis>=5.0.0  # 分布式
+
