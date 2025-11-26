@@ -12,3 +12,7 @@
 # json (数据存储)
 # os (文件操作)
 # datetime (时间处理)
+
+# 用户礼包发放工具依赖
+requests>=2.31.0
+pyinstaller>=6.16.0
