@@ -15,8 +15,8 @@ class UserPackSenderApp:
         self.api2_url = "http://10.102.40.32/service/content/ledu/right/giveByKefu"
         
         # 接口1固定参数
-        self.pack_id = 4006
-        self.pack_name = "乐读补偿礼包_不包含乐读_魂守"
+        self.pack_id = 4129
+        self.pack_name = "乐读补偿礼包_含非洲鼓-不包含乐读_魂守"
         self.desc = "客服已沟通补发"
         self.use_flag = 0
         
