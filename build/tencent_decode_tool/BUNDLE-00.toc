@@ -1,0 +1,3 @@
+([('腾讯云转码工具',
+   '/Users/edy/PycharmProjects/PythonProject/dist/腾讯云转码工具',
+   'EXECUTABLE')],)
