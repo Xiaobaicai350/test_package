@@ -810,7 +810,7 @@
  [],
  False,
  False,
- 1764836129,
+ 1765159772,
  [('runw',
    '/Users/edy/PycharmProjects/PythonProject/.venv/lib/python3.13/site-packages/PyInstaller/bootloader/Darwin-64bit/runw',
    'EXECUTABLE')],
