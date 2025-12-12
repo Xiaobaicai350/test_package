@@ -32,6 +32,14 @@ def check_pyinstaller():
     return run_command("pyinstaller --version", "检查PyInstaller版本")
 
 
+def remove_quarantine(app_path):
+    """移除应用的隔离属性，避免 Gatekeeper 阻止"""
+    if platform.system() == 'Darwin':
+        cmd = f'xattr -cr "{app_path}"'
+        return run_command(cmd, "移除隔离属性")
+    return True
+
+
 def build_app():
     """构建Mac应用"""
     system = platform.system()
@@ -43,7 +51,15 @@ def build_app():
     
     # 使用spec文件打包
     cmd = 'pyinstaller tencent_decode_tool.spec'
-    return run_command(cmd, "构建Mac应用")
+    success = run_command(cmd, "构建Mac应用")
+    
+    # 打包成功后，移除隔离属性
+    if success and system == "Darwin":
+        app_path = "dist/腾讯云转码工具.app"
+        if os.path.exists(app_path):
+            remove_quarantine(app_path)
+    
+    return success
 
 
 def main():
@@ -82,6 +98,10 @@ def main():
                     print(f"  - {item} ({size:.1f} MB)")
         
         print("\n💡 提示: 可以在 dist/ 目录中找到 '腾讯云转码工具.app'")
+        print("\n📋 分发说明:")
+        print("   1. 将 '腾讯云转码工具.app' 发送给其他用户")
+        print("   2. 如果用户遇到无法打开的问题，请参考 '使用说明.md'")
+        print("   3. 建议同时发送 '使用说明.md' 文件给用户")
     else:
         print("\n❌ 构建失败，请检查错误信息")
 
